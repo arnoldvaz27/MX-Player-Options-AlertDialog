@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutMoreDetailOptions"
+    android:layout_gravity="center"
+    android:background="@drawable/background_dialog">
+
+    <RelativeLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/ViewModeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:includeFontPadding="true"
+            android:text="@string/view_mode"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="92dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:layout_toEndOf="@id/ViewModeText"
+            android:includeFontPadding="true"
+            android:text="@string/layout"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+
+        <LinearLayout
+            android:id="@+id/viewModeImages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ViewModeText">
+
+
+            <ImageView
+                android:id="@+id/folders"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/folders"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+
+            <ImageView
+                android:id="@+id/folder"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/folder"
+                android:layout_marginStart="34dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/blue"
+
+                android:contentDescription="@string/todo" />
+
+            <ImageView
+                android:id="@+id/file"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/files"
+                android:layout_marginStart="27dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="185dp"
+            android:layout_marginBottom="7dp"
+            android:layout_below="@id/ViewModeText"
+            android:background="@color/BestTheme" />
+
+        <LinearLayout
+            android:id="@+id/viewModeImagesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/viewModeImages">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/all_folders"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/folders"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="11dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/blue"
+                android:textSize="11sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/files"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/ViewModeText"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@id/viewModeImages">
+
+            <LinearLayout
+                android:id="@+id/listViewOptions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/list"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:src="@drawable/list"
+                    android:layout_marginStart="38dp"
+                    android:layout_marginTop="11dp"
+                    android:layout_marginBottom="7dp"
+                    app:tint="@color/blue"
+                    android:contentDescription="@string/todo" />
+
+                <ImageView
+                    android:id="@+id/grid"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/grid"
+                    android:layout_marginStart="39dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="7dp"
+                    app:tint="@color/white"
+                    android:contentDescription="@string/todo" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_toEndOf="@id/viewModeImages"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/layoutImages">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/list"
+                android:layout_marginStart="38dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/blue"
+                android:textSize="11sp"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grid"
+                android:layout_marginStart="42dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                tools:ignore="SmallSp" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/firstView"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_below="@id/viewModeImagesText"
+            android:background="@color/BestTheme" />
+
+        <TextView
+            android:id="@+id/SortText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:includeFontPadding="true"
+            android:layout_below="@id/firstView"
+            android:text="@string/sort"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/SortImagesFirstLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/SortText"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp">
+
+            <ImageView
+                android:id="@+id/Title"
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:src="@drawable/title"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/blue"
+                android:contentDescription="@string/todo" />
+
+            <ImageView
+                android:id="@+id/Date"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/date"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+
+
+            <ImageView
+                android:id="@+id/PLayedTime"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/clock"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+
+
+            <ImageView
+                android:id="@+id/Status"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/status"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+
+
+            <ImageView
+                android:id="@+id/Length"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/length"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SortImagesFirstLayoutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/SortImagesFirstLayout">
+
+            <TextView
+                android:id="@+id/TitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:layout_marginStart="28dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/blue"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/DateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/PLayedTimeText"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:text="@string/played_time"
+                android:layout_marginStart="28dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/StatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/LengthText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/length"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="25dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SortImagesSecondLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/SortImagesFirstLayoutText"
+            android:layout_marginBottom="5dp">
+
+            <ImageView
+                android:layout_width="31dp"
+                android:layout_height="31dp"
+                android:src="@drawable/size"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/hd"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/location"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/frames"
+                android:layout_marginStart="38dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:src="@drawable/video_type"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginBottom="7dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SortImagesSecondLayoutText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/SortImagesSecondLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/size"
+                android:layout_marginStart="28dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quality"
+                android:layout_marginStart="29dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:layout_marginStart="17dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/frame_rate"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="18dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/type"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="26dp"
+                android:layout_marginBottom="7dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/secondView"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_below="@id/SortImagesSecondLayoutText"
+            android:background="@color/BestTheme" />
+
+        <LinearLayout
+            android:id="@+id/FieldsVisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondView"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            tools:ignore="UseCompoundDrawables">
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="6dp"
+                android:padding="4dp"
+                android:includeFontPadding="true"
+                android:text="@string/fields"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:layout_gravity="end"
+                android:src="@drawable/arrow"
+                app:tint="@color/white"
+                android:contentDescription="@string/todo" />
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/thirdView"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_below="@id/FieldsVisible"
+            android:background="@color/BestTheme" />
+
+        <LinearLayout
+            android:id="@+id/thumbNail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/thirdView"
+            android:layout_marginTop="5dp"
+            >
+            <TextView
+                android:layout_width="255dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="9dp"
+                android:padding="4dp"
+                android:includeFontPadding="true"
+                android:text="@string/display_length_over_thumbnail"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchCompat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:thumb="@drawable/thumb"
+                app:track="@drawable/track"
+                android:checked="true"
+                app:thumbTint="@color/blue"
+                app:trackTint="@color/dark_blue"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/hiddenFiles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/thumbNail"
+            android:layout_marginBottom="5dp"
+            >
+            <TextView
+                android:layout_width="255dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:padding="4dp"
+                android:includeFontPadding="true"
+                android:text="@string/show_hidden_files_and_folders"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchCompat2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:thumb="@drawable/thumb"
+                app:track="@drawable/track"
+                android:checked="false"
+                app:thumbTint="@color/BestTheme"
+                app:trackTint="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/noMedia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hiddenFiles"
+            android:layout_marginBottom="5dp"
+            >
+            <TextView
+                android:layout_width="255dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:padding="4dp"
+                android:includeFontPadding="true"
+                android:text="@string/recognize_nomedia"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchCompat3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:thumb="@drawable/thumb"
+                app:track="@drawable/track"
+                android:checked="true"
+                app:thumbTint="@color/blue"
+                app:trackTint="@color/dark_blue"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/fourthView"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_below="@id/noMedia"
+            android:background="@color/BestTheme" />
+
+        <TextView
+            android:id="@+id/Cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="192dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:includeFontPadding="true"
+            android:text="@string/cancel"
+            android:layout_below="@id/fourthView"
+            android:textColor="@color/teal_200"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="4dp"
+            android:layout_below="@id/fourthView"
+            android:includeFontPadding="true"
+            android:layout_toEndOf="@id/Cancel"
+            android:text="@string/done"
+            android:textColor="@color/teal_200"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</RelativeLayout>
+

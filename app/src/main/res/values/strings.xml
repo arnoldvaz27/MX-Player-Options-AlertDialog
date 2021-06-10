@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Alert Dialog</string>
+    <string name="view_mode">View Mode</string>
+    <string name="layout">Layout</string>
+    <string name="todo">TODO</string>
+    <string name="all_folders">All Folders</string>
+    <string name="folders">Folders</string>
+    <string name="files">Files</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="sort">Sort</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="played_time">Played time</string>
+    <string name="status">Status</string>
+    <string name="length">Length</string>
+    <string name="size">Size</string>
+    <string name="quality">Quality</string>
+    <string name="location">Location</string>
+    <string name="frame_rate">Frame Rate</string>
+    <string name="type">Type</string>
+    <string name="fields">Fields</string>
+    <string name="display_length_over_thumbnail">Display length over thumbnail</string>
+    <string name="show_hidden_files_and_folders">Show hidden files and folders</string>
+    <string name="recognize_nomedia">Recognize .nomedia</string>
+    <string name="cancel">Cancel</string>
+    <string name="done">Done</string>
+    <string name="dashboard">Dashboard</string>
+</resources>

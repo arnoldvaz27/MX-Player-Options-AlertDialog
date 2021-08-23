@@ -1,4 +1,4 @@
-package com.example.mxplayerdetailoptionui;
+package com.arnoldvaz27.mxplayerdetailoptionui;
 
 import android.content.Context;
 

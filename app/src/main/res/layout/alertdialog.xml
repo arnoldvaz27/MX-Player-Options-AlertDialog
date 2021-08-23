@@ -265,7 +265,7 @@
 
 
             <ImageView
-                android:id="@+id/PLayedTime"
+                android:id="@+id/PlayedTime"
                 android:layout_width="23dp"
                 android:layout_height="23dp"
                 android:src="@drawable/clock"
@@ -329,7 +329,7 @@
 
 
             <TextView
-                android:id="@+id/PLayedTimeText"
+                android:id="@+id/PlayedTimeText"
                 android:layout_width="48dp"
                 android:layout_height="wrap_content"
                 android:text="@string/played_time"

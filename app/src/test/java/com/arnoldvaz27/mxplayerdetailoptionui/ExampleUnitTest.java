@@ -1,4 +1,4 @@
-package com.example.mxplayerdetailoptionui;
+package com.arnoldvaz27.mxplayerdetailoptionui;
 
 import org.junit.Test;
 
